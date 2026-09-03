@@ -1,0 +1,203 @@
+/* --- CSS Reset (helps different browsers start the same way) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Core Styles & Typography --- */
+body {
+    background-color: #FDF4E3; /* A soft cream base */
+    font-family: 'Quicksand', sans-serif; /* Clean body font */
+    font-weight: 500;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px; /* Limits overall page width on desktops */
+    margin: 0 auto; /* Centers the content block */
+    padding: 0 20px;
+}
+
+/* --- Header & Greeting --- */
+header {
+    background-color: #FDF4E3;
+    padding: 30px 0 10px;
+    text-align: center;
+}
+
+.greeting {
+    font-family: 'Montserrat Alternates', sans-serif; /* Rounded 60s font */
+    font-weight: 700;
+    font-size: 2rem;
+    color: #D36C22; /* Burnt Orange */
+    text-shadow: 2px 2px 0px #F9B641; /* Small shadow for depth */
+}
+
+/* --- Main Layout --- */
+main {
+    padding: 20px 0 60px;
+}
+
+/* --- Intro/Bio Section --- */
+.intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.avatar-container {
+    max-width: 320px; /* Centers the avatar graphic */
+    margin: 0 auto 30px;
+}
+
+.avatar-image {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif; /* Bold, classic serif header */
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #4C5D37; /* Olive Green */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Interests/Cards Section --- */
+.interests {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    gap: 20px;
+    justify-content: center; /* Centers the group of cards */
+    margin-bottom: 60px;
+}
+
+.card {
+    background: #fff;
+    flex: 1 1 calc(50% - 20px); /* Tries to take 50% width minus the gap */
+    max-width: 230px; /* Limits maximum size on large screens */
+    min-width: 200px; /* Smallest size a card can be */
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    border: 3px solid #6BA19C; /* A standard border color */
+    box-shadow: 4px 4px 0px rgba(107, 161, 156, 0.3); /* Offset shadow */
+    transition: transform 0.2s; /* A quick little effect on hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Gentle lift on hover */
+}
+
+.card h2 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 0.9rem;
+}
+
+.icon {
+    width: 60px;
+    height: auto;
+}
+
+/* Specific Card Theme Colors */
+.data-science { border-color: #6BA19C; } /* Teal */
+.ai { border-color: #D36C22; } /* Burnt Orange */
+.coding { border-color: #F9B641; } /* Mustard Gold */
+.teaching { border-color: #4C5D37; } /* Olive Green */
+
+.data-science h2 { color: #6BA19C; }
+.ai h2 { color: #D36C22; }
+.coding h2 { color: #F9B641; }
+.teaching h2 { color: #4C5D37; }
+
+/* --- Connect/Contact Section --- */
+.connect {
+    text-align: center;
+}
+
+.connect h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.connect-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Needed for mobile */
+}
+
+.connect-links a {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none; /* Removes underline */
+    color: #D36C22; /* Primary groovy orange */
+    padding: 8px 16px;
+    border: 2px solid #D36C22;
+    border-radius: 8px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.connect-links a:hover {
+    background-color: #D36C22;
+    color: #FDF4E3; /* Flips color on hover */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #E8DCC0; /* A darker cream */
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* --- Mobile Responsiveness (Small Screens) --- */
+@media (max-width: 600px) {
+    .greeting {
+        font-size: 1.6rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .interests {
+        gap: 15px; /* Tighter spacing on small screens */
+    }
+
+    .card {
+        flex: 1 1 100%; /* Make cards stack vertically, 1 per row */
+        max-width: 100%; /* Override desktop max-width */
+    }
+
+    .connect-links {
+        gap: 15px; /* Tighter spacing on mobile */
+    }
+}
